@@ -176,7 +176,7 @@ if section == "🎬 Movie Recommendation":
             column = [col1, col2, col3][col_index % 3]
             card = f"""
                 <div style='background: linear-gradient(to bottom right, #000000, #070606); padding:12px; border-radius:16px; box-shadow:0 8px 16px rgba(0,0,0,0.15); text-align:center; margin-bottom:20px; width:250px; height:530px; margin-left:auto; margin-right:auto;'>
-                    <img src='{poster}' width='210px' height='280px' style='border-radius:12px; box-shadow:0 2px 6px rgba(0,0,0,0.2);' /><br><br>
+                    <img src='{poster}' width='210px' height='240px' style='border-radius:12px; box-shadow:0 2px 6px rgba(0,0,0,0.2);' /><br><br>
                     <b style='font-size:16px; color:#333;'>{title}</b><br>
                     ⭐ {rating} | 📅 {year}<br>
                     🎬 {director}<br>
