@@ -41,17 +41,29 @@ df5 = movie_pkg["df5"]
 # --- Sidebar ---
 with st.sidebar:
     st.image("riteshsamridhipics.jpg", width=200)
-    st.markdown("## 📂 Project Sections")
-    with st.expander("🔬 LENSR NLP Toolkit", expanded=True):
-        section = st.radio("Choose Module:", [
+
+    st.markdown("""
+        <div style='background-color:#e0f0ff; padding:15px; border-radius:12px; margin-top:15px; box-shadow:0 2px 8px rgba(0,0,0,0.1);'>
+            <h3 style='color:#1e3c72; text-align:center;'>🔬 LENSR NLP Toolkit</h3>
+            <p style='color:#333333; font-size:14px; text-align:center;'>Select a project module to explore different NLP and ML capabilities.</p>
+        </div>
+    """, unsafe_allow_html=True)
+
+    section = st.radio(
+        "📌 Project Modules",
+        [
             "📨 Spam Classifier",
             "🌐 Language Detection",
             "🍽️ Review Sentiment",
             "🗞️ News Classifier",
             "🎬 Movie Recommendation",
             "🧠 Train Your Own Model"
-        ])
+        ],
+        index=0,
+        help="Choose an NLP or ML module to use"
+    )
 
+    st.markdown("<hr>", unsafe_allow_html=True)
 # --- Spam ---
 if section == "📨 Spam Classifier":
     st.header("📨 Spam Classifier")
