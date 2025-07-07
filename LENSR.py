@@ -260,7 +260,7 @@ with st.sidebar.expander("🤝 Help & Instructions"):
 st.markdown("""
     <hr style="margin-top: 40px; border: none; border-top: 2px solid #ccc;" />
     <div style="text-align: center; padding: 10px; font-size: 24px; color: #555;">
-        🔍 <b>LENS eXpert</b> | Built with ❤️ using <b>Streamlit</b>, <b>sklearn</b>, and <b>nltk</b><br>
+        🔍 <b>LENSR eXpert</b> | Built with ❤️ using <b>Streamlit</b>, <b>sklearn</b>, and <b>nltk</b><br>
         📚 For Learning & Academic Use | © 2025
     </div>
 """, unsafe_allow_html=True)
