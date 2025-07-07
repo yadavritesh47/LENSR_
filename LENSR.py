@@ -135,7 +135,7 @@ elif section == "🗞️ News Classifier":
         st.dataframe(df)
 
 # --- Movie Recommendation ---
-elif section == "🎬 Movie Recommendation":
+if section == "🎬 Movie Recommendation":
     st.header("🎬 Movie Recommendation System")
     st.markdown("""<p style='color:gray'>Select a movie and get top similar movie recommendations based on genre, cast, and other content-based filters.</p>""", unsafe_allow_html=True)
     df5['normalized_name'] = df5['name'].str.strip().str.lower()
@@ -161,12 +161,15 @@ elif section == "🎬 Movie Recommendation":
             url = f"http://www.omdbapi.com/?i={movie_id}&apikey=1d2456cd"
             try:
                 data = requests.get(url).json()
-                poster = data.get("Poster", "")
-                rating = data.get("imdbRating", "N/A")
-                year = data.get("Year", "N/A")
-                director = data.get("Director", director)
-                cast = data.get("Actors", cast)
-                genre = data.get("Genre", genre)
+                if data.get("Response", "False") == "True":
+                    poster = data.get("Poster", "") or ""
+                    rating = data.get("imdbRating", "N/A")
+                    year = data.get("Year", "N/A")
+                    director = data.get("Director", director)
+                    cast = data.get("Actors", cast)
+                    genre = data.get("Genre", genre)
+                else:
+                    poster, rating, year = "", "N/A", "N/A"
             except:
                 poster, rating, year = "", "N/A", "N/A"
 
@@ -191,6 +194,7 @@ elif section == "🎬 Movie Recommendation":
             buf = io.StringIO()
             df_result.to_csv(buf, index=False)
             st.download_button("📥 Download Recommendations", buf.getvalue(), file_name="recommended_movies.csv")
+
 
 # --- Train Your Own Model ---
 elif section == "🧠 Train Your Own Model":
