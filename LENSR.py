@@ -40,12 +40,7 @@ df5 = movie_pkg["df5"]
 
 # --- Sidebar ---
 with st.sidebar:
-    st.markdown("""
-        <div style='margin-top: -15px; text-align: center;'>
-            <img src='riteshsamridhipics.jpg' width='180'>
-        </div>
-    """, unsafe_allow_html=True)
-
+    st.image("riteshsamridhipics.jpg"
     st.markdown("""
     <div style='
         background-color:#e0f0ff; 
