@@ -21,10 +21,9 @@ st.set_page_config(page_title="LENSR eXpert", layout="wide")
 
 # --- Header ---
 st.markdown("""
-    <div style='background: linear-gradient(90deg, #1e3c72, #2a5298); padding: 25px; border-radius: 15px; text-align: center;'>
-        <h1 style='color: white; font-size: 48px;'>🔍 LENSR eXpert</h1>
-        <h3 style='color: #e0f7fa;'>Smart NLP & Movie Recommendation Toolkit</h3>
-        <p style='color: #ffffff; font-size: 18px;'>Created by <b style='color:#FFD700;'>Ritesh Kumar</b> | 📧 07mrriteshkr@gmail.com | 📍 Noida | 📞 6203727527</p>
+    <div style='background-color:#e0f0ff; padding:10px; border-radius:10px; margin-top:10px; box-shadow:0 1px 5px rgba(0,0,0,0.1);'>
+        <h4 style='color:#1e3c72; text-align:center; margin-bottom:6px;'>🔬 LENSR NLP Toolkit</h4>
+        <p style='color:#333333; font-size:13px; text-align:center; margin: 0;'>Select a module to explore NLP & ML capabilities.</p>
     </div>
 """, unsafe_allow_html=True)
 
