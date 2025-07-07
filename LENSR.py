@@ -43,12 +43,19 @@ with st.sidebar:
     st.image("riteshsamridhipics.jpg", width=200)
 
     st.markdown("""
-        <div style='background-color:#e0f0ff; padding:15px; border-radius:12px; margin-top:15px; box-shadow:0 2px 8px rgba(0,0,0,0.1);'>
-            <h3 style='color:#1e3c72; text-align:center;'>🔬 LENSR NLP Toolkit</h3>
-            <p style='color:#333333; font-size:14px; text-align:center;'>Select a project module to explore different NLP and ML capabilities.</p>
-        </div>
-    """, unsafe_allow_html=True)
-
+    <div style='
+        background-color:#e0f0ff; 
+        padding:8px 10px; 
+        border-radius:10px; 
+        margin-top:10px; 
+        box-shadow:0 1px 5px rgba(0,0,0,0.1); 
+        text-align:center;
+        width:100%;
+    '>
+        <h4 style='color:#1e3c72; margin-bottom:4px; font-size:16px;'>🔬 LENSR NLP Toolkit</h4>
+        <p style='color:#333333; font-size:12.5px; margin: 0;'>Explore different NLP & ML capabilities.</p>
+    </div>
+""", unsafe_allow_html=True)
     section = st.selectbox(
         "📌 Select a Project Module:",
         options=[
