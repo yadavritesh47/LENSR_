@@ -49,9 +49,10 @@ with st.sidebar:
         </div>
     """, unsafe_allow_html=True)
 
-    section = st.radio(
-        "📌 Project Modules",
-        [
+    section = st.selectbox(
+        "📌 Select a Project Module:",
+        options=[
+            "",  # Empty default
             "📨 Spam Classifier",
             "🌐 Language Detection",
             "🍽️ Review Sentiment",
